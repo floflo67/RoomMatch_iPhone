@@ -12,6 +12,7 @@
 
 @interface LeftSidebarViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) id <LeftSidebarViewControllerDelegate> sidebarDelegate;
+@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 @end
 
 @protocol LeftSidebarViewControllerDelegate <NSObject>

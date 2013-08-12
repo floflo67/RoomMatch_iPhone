@@ -9,8 +9,8 @@
 #import "LeftSidebarViewController.h"
 
 @interface LeftSidebarViewController ()
-@property (nonatomic, strong) NSArray *objects;
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) NSArray *objects;
 @property (nonatomic) NSInteger index;
 @end
 
@@ -81,6 +81,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"section: %i, row: %i", indexPath.section, indexPath.row);
+    self.selectedIndexPath = indexPath;
 }
 
 #pragma mark - getter and setter
