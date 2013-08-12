@@ -12,8 +12,8 @@
 
 @interface RoomMatchAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
-@property (strong, nonatomic) RoomMatchViewController *viewController;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) RoomMatchViewController *viewController;
+@property (nonatomic, strong) UINavigationController *navigationController;
 
 @end
