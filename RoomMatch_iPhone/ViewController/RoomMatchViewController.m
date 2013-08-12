@@ -7,10 +7,13 @@
 //
 
 #import "RoomMatchViewController.h"
-#import <MapKit/MapKit.h>
+#import "UIViewController+JTRevealSidebarV2.h"
+#import "UINavigationItem+JTRevealSidebarV2.h"
 
-@interface RoomMatchViewController () <LeftSidebarViewControllerDelegate, MKMapViewDelegate>
+@interface RoomMatchViewController()
 @property (nonatomic, weak) IBOutlet MKMapView *mapView;
+@property (nonatomic, weak) NSIndexPath *leftSelectedIndexPath;
+@property (nonatomic, strong) LeftSidebarViewController *leftSidebarViewController;
 @end
 
 @implementation RoomMatchViewController
@@ -20,14 +23,9 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
-    /*self.centerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-    [self.view addSubview:self.centerView];*/
     self.navigationItem.title = @"Room match";
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ButtonMenuLeft.png"]
-                                                                             style:UIBarButtonItemStyleBordered
-                                                                            target:self
-                                                                            action:@selector(revealLeftSidebar:)];    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"ButtonMenuLeft.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(revealLeftSidebar:)];    
     self.navigationItem.revealSidebarDelegate = self;
     self.mapView.region = [self setupMapView];
 }
@@ -72,13 +70,7 @@
 {
     CGRect viewFrame = self.navigationController.applicationViewFrame;
     UIViewController *controller = self.leftSidebarViewController;
-    if (!controller) {
-        self.leftSidebarViewController = [[LeftSidebarViewController alloc] init];        
-        self.leftSidebarViewController.sidebarDelegate = self;
-        controller = self.leftSidebarViewController;
-    }
-    controller.view.frame = CGRectMake(0, viewFrame.origin.y - 5, 270, viewFrame.size.height + 5);
-    //controller.view.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleHeight;
+    controller.view.frame = CGRectMake(0, viewFrame.origin.y, 270, viewFrame.size.height);
     return controller.view;
 }
 
@@ -101,7 +93,20 @@
 
 - (NSIndexPath*)lastSelectedIndexPathForSidebarViewController:(LeftSidebarViewController*)sidebarViewController
 {
+    if(self.leftSelectedIndexPath != sidebarViewController.selectedIndexPath)
+        self.leftSelectedIndexPath = sidebarViewController.selectedIndexPath;
     return self.leftSelectedIndexPath;
+}
+
+#pragma mark - getter and setter
+
+- (LeftSidebarViewController *)leftSidebarViewController
+{
+    if(!_leftSidebarViewController) {
+        _leftSidebarViewController = [[LeftSidebarViewController alloc] init];
+        _leftSidebarViewController.sidebarDelegate = self;
+    }
+    return _leftSidebarViewController;
 }
 
 @end
