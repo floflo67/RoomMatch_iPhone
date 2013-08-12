@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JTRevealSidebarV2Delegate.h"
+#import "LeftSidebarViewController.h"
+#import "UIViewController+JTRevealSidebarV2.h"
+#import "UINavigationItem+JTRevealSidebarV2.h"
 
-@interface RoomMatchViewController : UIViewController
+@class LeftSidebarViewController;
+
+@interface RoomMatchViewController : UIViewController <JTRevealSidebarV2Delegate>
+
+@property (nonatomic, strong) LeftSidebarViewController *leftSidebarViewController;
+@property (nonatomic, strong) UIView *centerView;
+@property (nonatomic, strong) NSIndexPath *leftSelectedIndexPath;
 
 @end
