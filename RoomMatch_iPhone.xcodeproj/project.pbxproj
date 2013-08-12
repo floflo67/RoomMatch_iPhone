@@ -20,6 +20,9 @@
 		5440F89017B84D9700603EDC /* UIViewController+JTRevealSidebarV2.m in Sources */ = {isa = PBXBuildFile; fileRef = 5440F88E17B84D9700603EDC /* UIViewController+JTRevealSidebarV2.m */; };
 		5440F89417B84E5E00603EDC /* RoomMatchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5440F89317B84E5E00603EDC /* RoomMatchViewController.xib */; };
 		5440F89717B84F0A00603EDC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5440F89517B84F0A00603EDC /* InfoPlist.strings */; };
+		546AAA1417B87F6A00B7D82E /* LeftSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 546AAA1217B87F6A00B7D82E /* LeftSidebarViewController.m */; };
+		546AAA1517B87F6A00B7D82E /* LeftSidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546AAA1317B87F6A00B7D82E /* LeftSidebarViewController.xib */; };
+		546AAA1717B8847300B7D82E /* ButtonMenuLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 546AAA1617B8847300B7D82E /* ButtonMenuLeft.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,10 @@
 		5440F88E17B84D9700603EDC /* UIViewController+JTRevealSidebarV2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JTRevealSidebarV2.m"; sourceTree = "<group>"; };
 		5440F89317B84E5E00603EDC /* RoomMatchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RoomMatchViewController.xib; sourceTree = "<group>"; };
 		5440F89617B84F0A00603EDC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		546AAA1117B87F6A00B7D82E /* LeftSidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftSidebarViewController.h; sourceTree = "<group>"; };
+		546AAA1217B87F6A00B7D82E /* LeftSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSidebarViewController.m; sourceTree = "<group>"; };
+		546AAA1317B87F6A00B7D82E /* LeftSidebarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftSidebarViewController.xib; sourceTree = "<group>"; };
+		546AAA1617B8847300B7D82E /* ButtonMenuLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonMenuLeft.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +134,7 @@
 		5440F89117B84DF500603EDC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				546AAA1617B8847300B7D82E /* ButtonMenuLeft.png */,
 				5440F87817B849FB00603EDC /* Default.png */,
 				5440F87A17B849FB00603EDC /* Default@2x.png */,
 				5440F87C17B849FB00603EDC /* Default-568h@2x.png */,
@@ -140,6 +148,9 @@
 				5440F87E17B849FB00603EDC /* RoomMatchViewController.h */,
 				5440F87F17B849FB00603EDC /* RoomMatchViewController.m */,
 				5440F89317B84E5E00603EDC /* RoomMatchViewController.xib */,
+				546AAA1117B87F6A00B7D82E /* LeftSidebarViewController.h */,
+				546AAA1217B87F6A00B7D82E /* LeftSidebarViewController.m */,
+				546AAA1317B87F6A00B7D82E /* LeftSidebarViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -201,6 +212,8 @@
 				5440F87D17B849FB00603EDC /* Default-568h@2x.png in Resources */,
 				5440F89417B84E5E00603EDC /* RoomMatchViewController.xib in Resources */,
 				5440F89717B84F0A00603EDC /* InfoPlist.strings in Resources */,
+				546AAA1517B87F6A00B7D82E /* LeftSidebarViewController.xib in Resources */,
+				546AAA1717B8847300B7D82E /* ButtonMenuLeft.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +229,7 @@
 				5440F88017B849FB00603EDC /* RoomMatchViewController.m in Sources */,
 				5440F88F17B84D9700603EDC /* UINavigationItem+JTRevealSidebarV2.m in Sources */,
 				5440F89017B84D9700603EDC /* UIViewController+JTRevealSidebarV2.m in Sources */,
+				546AAA1417B87F6A00B7D82E /* LeftSidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +344,7 @@
 				5440F88817B849FC00603EDC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
