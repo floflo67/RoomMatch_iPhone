@@ -169,9 +169,6 @@ static char *revealedStateKey;
     
     [UIView setAnimationDidStopSelector:@selector(animationDidStop2:finished:context:)];
     [UIView setAnimationDelegate:self];
-    
-    NSLog(@"%@", NSStringFromCGAffineTransform(self.view.transform));
-
 
     [UIView commitAnimations];
 }
@@ -204,9 +201,6 @@ static char *revealedStateKey;
     
     [UIView setAnimationDidStopSelector:@selector(animationDidStop2:finished:context:)];
     [UIView setAnimationDelegate:self];
-
-    NSLog(@"%@", NSStringFromCGAffineTransform(self.view.transform));
-    
     [UIView commitAnimations];
 }
 
