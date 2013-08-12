@@ -12,9 +12,6 @@
 
 @interface LeftSidebarViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, weak) id <LeftSidebarViewControllerDelegate> sidebarDelegate;
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray* menuItem;
-@property (nonatomic) NSInteger index;
 @end
 
 @protocol LeftSidebarViewControllerDelegate <NSObject>

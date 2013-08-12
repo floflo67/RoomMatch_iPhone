@@ -73,11 +73,8 @@
     CGRect viewFrame = self.navigationController.applicationViewFrame;
     UIViewController *controller = self.leftSidebarViewController;
     if (!controller) {
-        self.leftSidebarViewController = [[LeftSidebarViewController alloc] init];
-        self.leftSidebarViewController.tableView.scrollEnabled = YES;        
-        
+        self.leftSidebarViewController = [[LeftSidebarViewController alloc] init];        
         self.leftSidebarViewController.sidebarDelegate = self;
-        self.leftSidebarViewController.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         controller = self.leftSidebarViewController;
     }
     controller.view.frame = CGRectMake(0, viewFrame.origin.y - 5, 270, viewFrame.size.height + 5);

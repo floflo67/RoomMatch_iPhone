@@ -10,10 +10,20 @@
 
 @interface LeftSidebarViewController ()
 @property (nonatomic, strong) NSArray *objects;
-
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
+@property (nonatomic) NSInteger index;
 @end
 
 @implementation LeftSidebarViewController
+
+#pragma mark - view life cycle
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.objects = @[@[@"profile"], @[@"search", @"filter"], @[@"see matches"], @[@"notification", @"create alert"]];
+}
 
 #pragma mark - Table view data source
 
@@ -33,6 +43,22 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
     NSString *title;
+    switch (section) {
+        case 0:
+            title = @"Profile";
+            break;
+        case 1:
+            title = @"Search";
+            break;
+        case 2:
+            title = @"Matches";
+            break;
+        case 3:
+            title = @"Notifications";
+            break;
+        default:
+            break;
+    }
     
     return title;
 }
@@ -46,6 +72,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
+    cell.textLabel.text = [self.objects[indexPath.section][indexPath.row] description];
     return cell;
 }
 
@@ -53,7 +80,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSLog(@"section: %i, row: %i", indexPath.section, indexPath.row);
 }
 
 #pragma mark - getter and setter
