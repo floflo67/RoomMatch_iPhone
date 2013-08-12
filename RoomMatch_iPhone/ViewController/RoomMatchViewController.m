@@ -7,9 +7,10 @@
 //
 
 #import "RoomMatchViewController.h"
+#import <MapKit/MapKit.h>
 
-@interface RoomMatchViewController () <LeftSidebarViewControllerDelegate>
-
+@interface RoomMatchViewController () <LeftSidebarViewControllerDelegate, MKMapViewDelegate>
+@property (nonatomic, weak) IBOutlet MKMapView *mapView;
 @end
 
 @implementation RoomMatchViewController
@@ -28,8 +29,34 @@
                                                                             target:self
                                                                             action:@selector(revealLeftSidebar:)];    
     self.navigationItem.revealSidebarDelegate = self;
+    self.mapView.region = [self setupMapView];
 }
 
+#pragma mark - MapView delegate
+
+- (MKCoordinateRegion)setupMapView
+{
+    /*
+     Define size of zoom
+     */
+    MKCoordinateSpan span;
+    span.latitudeDelta = 0.02;
+    span.longitudeDelta = 0.02;
+    
+    /*
+     Define origin
+     Center = location of venue
+     */
+    CLLocationCoordinate2D location;
+    location.latitude = 37.78 ; // newLocation.coordinate.latitude;
+    location.longitude = - 122.41;// newLocation.coordinate.longitude;
+    
+    MKCoordinateRegion region;
+    region.span = span;
+    region.center = location;
+    
+    return region;
+}
 
 #pragma mark - reveal side bars
 

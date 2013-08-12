@@ -23,6 +23,7 @@
 		546AAA1417B87F6A00B7D82E /* LeftSidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 546AAA1217B87F6A00B7D82E /* LeftSidebarViewController.m */; };
 		546AAA1517B87F6A00B7D82E /* LeftSidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 546AAA1317B87F6A00B7D82E /* LeftSidebarViewController.xib */; };
 		546AAA1717B8847300B7D82E /* ButtonMenuLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 546AAA1617B8847300B7D82E /* ButtonMenuLeft.png */; };
+		54AE7C0717B89779007AFE74 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54AE7C0617B89779007AFE74 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		546AAA1217B87F6A00B7D82E /* LeftSidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftSidebarViewController.m; sourceTree = "<group>"; };
 		546AAA1317B87F6A00B7D82E /* LeftSidebarViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftSidebarViewController.xib; sourceTree = "<group>"; };
 		546AAA1617B8847300B7D82E /* ButtonMenuLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonMenuLeft.png; sourceTree = "<group>"; };
+		54AE7C0617B89779007AFE74 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54AE7C0717B89779007AFE74 /* MapKit.framework in Frameworks */,
 				5440F86717B849FB00603EDC /* UIKit.framework in Frameworks */,
 				5440F86917B849FB00603EDC /* Foundation.framework in Frameworks */,
 				5440F86B17B849FB00603EDC /* CoreGraphics.framework in Frameworks */,
@@ -88,9 +91,10 @@
 			isa = PBXGroup;
 			children = (
 				5440F88917B84D9700603EDC /* JTRevealSidebarV2 */,
-				5440F86617B849FB00603EDC /* UIKit.framework */,
-				5440F86817B849FB00603EDC /* Foundation.framework */,
 				5440F86A17B849FB00603EDC /* CoreGraphics.framework */,
+				5440F86817B849FB00603EDC /* Foundation.framework */,
+				54AE7C0617B89779007AFE74 /* MapKit.framework */,
+				5440F86617B849FB00603EDC /* UIKit.framework */,
 			);
 			name = Frameworks;
 			path = RoomMatch_iPhone/Frameworks;
